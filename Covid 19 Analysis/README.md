@@ -1,35 +1,41 @@
-# 📊 COVID-19 Data Analysis Project
+**COVID-19 Data Analysis Project**
 
-# 📖 Project Overview
-This project analyzes COVID-19 case trends, testing rates, and regional impacts using Python and data visualization techniques. It aims to identify patterns and insights from the dataset.
+**Project Overview**
+This project focuses on analyzing COVID-19 data across various countries and regions. The analysis includes identifying trends, detecting outliers, and visualizing key insights using data science techniques.
 
-# 📂 Dataset Information
-File Name: `data.csv`
-Columns:
-  - `country`: Country name
-  - `region_name`: Region within the country
-  - `year_week`: Time period (Year-Week format)
-  - `new_cases`: Number of newly reported COVID-19 cases
-  - `testing_rate`: Number of tests conducted per population
-  - `positivity_rate`: Percentage of positive cases from total tests
+**Dataset Information**
+Source: Downloaded CSV file containing COVID-19 case data.
 
-# 📊 Visualizations
-**1. Box Plot (After Removing Outliers)**
-- Shows distribution of COVID cases across countries.
-- Helps identify data spread and remove extreme outliers.
+**Columns:**
+country: Name of the country.
+country_code: ISO country code.
+year_week: Year and week of data collection.
+region_name: Subdivision within the country.
+new_cases: Number of new COVID-19 cases reported.
+tests_done: Number of tests conducted.
+population: Total population of the region.
+testing_rate: Testing rate per population.
+positivity_rate: Percentage of positive test results.
+testing_data_source: Source of the testing data.
 
-**2. Line Plot (Trends Over Time)**
-- Displays COVID cases over weeks/months.
-- Helps in tracking the pandemic’s progression.
+**Objectives**
+Identify trends in COVID-19 cases and testing rates over time.
+Remove outliers from the dataset to improve data quality.
+Visualize testing and positivity rates across different regions.
+Compare the distribution of COVID cases across countries.
+Data Cleaning & Processing
+Missing values were identified and handled appropriately.
+Outliers in new_cases were removed using the IQR method.
+Categorical data was excluded from correlation analysis.
 
-**3. Correlation Heatmap**
-- Analyzes relationships between testing rate, positivity rate, and new cases.
-- Helps understand how testing affects reported cases.
+**Key Visualizations**
+Scatterplots: Show relationships between testing rates, positivity rates, and new cases.
+Boxplots: Display the distribution of COVID-19 cases by country, both with and without outliers.
+Line Charts: Highlight trends in testing rates over time across different regions.
+Bar Charts: Identify the top 10 regions with the highest number of COVID-19 cases.
 
-**4. Bar Chart (Top Affected Regions)**
-- Highlights regions with the highest COVID cases.
-
-# 🧐 Key Findings
-- High testing rates generally result in lower positivity rates.
-- Certain regions had extreme spikes in cases (identified and handled through outlier removal).
-- Trend analysis shows waves of COVID outbreaks at different time periods.
+**Insights & Findings**
+Regions with high testing rates tend to have lower positivity rates, suggesting a well-managed testing strategy.
+Significant fluctuations in case numbers were observed over different time periods, indicating COVID waves.
+Outliers in new cases were removed to provide a more accurate representation of the data.
+Countries with larger populations had a wider spread in COVID cases, but the positivity rate varied significantly.
